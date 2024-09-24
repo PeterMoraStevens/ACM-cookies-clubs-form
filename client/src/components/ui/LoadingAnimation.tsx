@@ -7,12 +7,16 @@ const LoadingAnimation = ({ onComplete }: any) => {
     const timeline = gsap.timeline();
 
     timeline
-      .to(".loading-container", {
-        y: "-100%",
-        duration: 1.5,
-        ease: "power1.inOut",
-      })
-      .to(".loading-text", { opacity: 0, duration: 3 }, "<")
+      .to(
+        ".loading-container",
+        {
+          y: "-100%",
+          duration: 1,
+          ease: "power1.inOut",
+        },
+        "<"
+      )
+      .to(".loading-text", { opacity: 1, duration: 3 }, "<")
       .eventCallback("onComplete", onComplete);
 
     return () => {

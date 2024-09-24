@@ -19,6 +19,7 @@ const SelectMajor = ({ value, onChange }: any) => {
         <SelectItem value="Math/Stats">Math/Stats</SelectItem>
         <SelectItem value="AI (grad)">AI (grad)</SelectItem>
         <SelectItem value="General Engr">General Engr</SelectItem>
+        <SelectItem value="Other">Other</SelectItem>
       </SelectContent>
     </Select>
   );

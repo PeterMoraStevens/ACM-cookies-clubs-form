@@ -15,6 +15,7 @@ const interestsList = [
   "Community Events",
   "Internship Advice",
   "Competitive Programming",
+  "Making New Friends",
 ];
 
 const PopoverInterests = ({ value, onChange }: any) => {
