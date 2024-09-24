@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import "../../index.css";
 
@@ -14,6 +14,10 @@ const LoadingAnimation = ({ onComplete }: any) => {
       })
       .to(".loading-text", { opacity: 0, duration: 3 }, "<")
       .eventCallback("onComplete", onComplete);
+
+    return () => {
+      timeline.kill();
+    };
 
     return () => timeline.kill();
   }, [onComplete]);

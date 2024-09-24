@@ -1,5 +1,4 @@
 import {
-  DiscIcon,
   DiscordLogoIcon,
   InstagramLogoIcon,
   LaptopIcon,
