@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+html {
+  background-color: black;
+}
+
+/* src/components/LoadingAnimation.css */
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2410c;
+  overflow: hidden;
+  z-index: 1000;
+  transition: transform 1s ease-in-out;
+}
+
+.loading-text {
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 10;
+}
