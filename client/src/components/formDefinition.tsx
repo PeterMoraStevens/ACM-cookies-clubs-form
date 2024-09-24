@@ -75,15 +75,12 @@ export function ProfileForm() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 
     // Optional: Open Instagram link after submission
-    setTimeout(() => {
-      window.open("https://www.instagram.com/osu.acm/", "_blank");
-    }, 4000);
   }
 
   return submitted ? (
     <div className="z-50 text-center text-orange-500">
       <div>Thank you for submitting! 🧡🦫</div>
-      <Confetti />
+      <Confetti numberOfPieces={50} />
       <Footer />
     </div>
   ) : (
