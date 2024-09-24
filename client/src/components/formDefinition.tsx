@@ -55,6 +55,8 @@ export function ProfileForm() {
   const [submitted, setSubmitted] = useState(false);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
     fetch(
       "https://script.google.com/macros/s/AKfycbwBo9YZMbZhpVy4ljZlPB6v6nJTmlgObmuTv0Tel0mR62WFM7Vg0-CLx2NuToVTM2NgYw/exec",
       {
@@ -72,14 +74,14 @@ export function ProfileForm() {
       });
 
     setSubmitted(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
 
     // Optional: Open Instagram link after submission
   }
 
   return submitted ? (
-    <div className="z-50 text-center text-orange-500">
+    <div className="z-50 text-center text-orange-500 mt-48">
       <div>Thank you for submitting! 🧡🦫</div>
+
       <Confetti numberOfPieces={50} />
       <Footer />
     </div>
